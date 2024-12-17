@@ -1,0 +1,258 @@
+/* Estilo global para margens, preenchimento e fonte */
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Define box-sizing para incluir bordas e padding nas dimensões dos elementos */
+}
+
+/* Fundo com gradiente aplicado ao body */
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte 'Poppins' como fonte padrão */
+    background: #2C2C2C; /* Aplica cor ao fundo */
+    color: #ffffff; /* Define a cor do texto */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da tela */
+    display: flex; /* Define o display como flex para organizar o layout do conteúdo */
+    flex-direction: column; /* Organiza os elementos no body em coluna */
+    align-items: center; /* Centraliza os elementos do body horizontalmente */
+}
+
+/* Estilo do header */
+header {
+    width: 100%; /* Faz o header ocupar toda a largura da tela */
+    min-height: 120px; /* Altura mínima para melhorar o layout responsivo */
+    text-align: center; /* Centraliza o conteúdo do header horizontalmente */
+}
+
+.logo-img{
+    display: flex; /* Garante que os slides sejam dispostos horizontalmente */
+    width: auto; /* Largura total do conteúdo do slider */
+    height: 400px; /* Mantém a altura do slider */
+    position: relative; /* Permite que elementos filhos sejam posicionados em relação a este contêiner */
+    overflow: hidden; /* Impede que o conteúdo transborde do contêiner */
+}
+
+/* Navegação centralizada e horizontal */
+.navegacao {
+    margin-top: 20px; /* Espaçamento superior ao slider */
+    font-size: 1.5em; /* Tamanho da fonte para os links */
+    display: flex; /* Define o layout como flex para organizar os itens horizontalmente */
+    justify-content: center; /* Centraliza a navegação */
+    gap: 100px; /* Define um espaçamento entre cada item de navegação */
+    list-style-type: none; /* Remove os marcadores de lista padrão (como bolinhas) */
+    padding-left: 400px; /* Define um espaçamento entre o lado esquerdo e navegação */
+}
+
+.navegacao a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff; /* Cor padrão do texto */
+    font-size: 1.5rem; /* Tamanho da fonte para o link */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+}
+
+.navegacao li {
+    cursor: pointer; /* Muda o cursor ao passar sobre os itens */
+}
+
+.navegacao a:hover {
+    color: rgba(212, 175, 55, 0.8); /* Cor do link no hover */
+    transform: scale(1.1); /* Aumenta levemente o link no hover */
+    opacity: 0.8; /* Efeito de opacidade no hover */
+}
+
+/* Contêiner da navegação e dos botões sociais */
+.nav-social-container {
+    display: flex; /* Exibe a navegação e os botões sociais lado a lado */
+    justify-content: space-between; /* Coloca a navegação à esquerda e os botões sociais à direita */
+    align-items: center; /* Centraliza verticalmente os itens dentro do contêiner */
+    width: 100%; /* Faz o contêiner ocupar toda a largura */
+    max-width: 1200px; /* Limita a largura máxima para telas grandes */
+    padding: 15px 20px; /* Espaçamento interno */
+    margin-top: 10px; /* Espaçamento superior */
+    
+}
+
+.rodape {
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 10px; /* Adiciona preenchimento interno */
+    margin-bottom: 20px; /* Adiciona espaço externo entre o rodapé e o fim da tela */
+    font-size: 16px; /* Ajusta o tamanho do texto */
+}
+
+/* Estilização do conteiner do projeto */
+.conteiner-projetos{
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando não houver espaço suficiente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-top: 50px; /* Distância do contêiner ao topo */
+}
+
+/* Estilo para cada projeto */
+.conteiner-projetos > div {
+    display: flex; /* Flexbox para alinhar o conteúdo dentro de cada contêiner */
+    flex-direction: column; /* Alinha os itens verticalmente dentro do contêiner do projeto */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    max-width: 200px; /* Define a largura máxima para cada projeto */
+    border-radius: 8px; /* Borda arredondada */
+    border: 1px solid #c5a880; /* Borda em tom de ouro */
+    box-shadow: 0 4px 6px rgb(197, 168, 128, 0.9); /* Sombra leve */
+    padding: 5px; /* Espaçamento interno */
+    background: transparent; /* Fundo branco para destacar o projeto */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Imagens dentro dos projetos */
+.conteiner-projetos .image {
+    width: 100%; /* Imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada para a imagem */
+}
+
+/* Esconde a seção de fotos por padrão */
+.foto-section {
+    display: none; /* Oculta a seção inicialmente */
+    position: absolute; /* Posiciona a seção sobre todo o conteúdo */
+    top: 0; /* Alinha ao topo da janela */
+    left: 0; /* Alinha à esquerda da janela */
+    width: 100%; /* Faz a seção ocupar toda a largura */
+    height: 100%; /* Faz a seção ocupar toda a altura */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com 80% de opacidade */
+    color: #ffffff; /* Define o texto em branco */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
+    overflow: auto; /* Permite rolagem se o conteúdo for grande */
+}
+
+/* Exibe a seção de fotos quando o ID é alvo (via :target) */
+.foto-section:target {
+    display: block; /* Torna a seção visível */
+}
+
+.photo-gallery {
+    display: grid; /* Usamos o Grid Layout */
+    grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas */
+    column-gap: 10px; /* Espaçamento horizontal reduzido entre as colunas */
+    row-gap: 50px; /* Espaçamento vertical entre as linhas */
+    justify-items: center; /* Centraliza horizontalmente cada imagem no grid */
+    align-items: center; /* Centraliza verticalmente cada imagem no grid */
+}
+
+.photo-gallery img {
+    width: 300px; /* Define largura fixa para as imagens */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Faz com que a imagem preencha proporcionalmente o espaço */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    border: 2px solid rgb(197, 168, 128, 0.9); /* Adiciona uma borda */
+    transition: transform 0.3s ease; /* Suaviza a animação de zoom */
+    cursor: pointer; /* Exibe o ponteiro ao passar sobre as imagens */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.photo-gallery img:hover {
+    transform: scale(1.1); /* Aumenta em 10% a escala da imagem */
+}
+
+/* Botão de fechar */
+.close {
+    display: inline-block; /* Alinha o botão como um bloco em linha */
+    position: absolute; /* Posiciona o botão no canto superior direito */
+    right: 50px; /* Distância da borda direita */
+    margin-bottom: 20px; /* Espaçamento abaixo do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border: 2px solid rgb(197, 168, 128, 0.9); /* Adiciona uma borda */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background 0.3s ease, color 0.3s ease; /* Suaviza mudanças de cor e fundo */
+    margin-top: 50px; /* Define o ajuste à distancia do contêiner para o texto */
+}
+
+/* Efeito ao passar o mouse no botão de fechar */
+.close:hover {
+    background: rgb(197, 168, 128, 0.9); /* Altera o fundo para vermelho sólido */
+    color: #ffffff; /* Altera o texto para branco */
+}
+
+/* Ajusta o título "Fotos do Projeto" */
+.foto-section h2 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #ffffff; /* Cor do texto */
+    margin-top: 100px; /* Define o ajuste à distancia do contêiner para o texto */
+}
+
+/* Para alinhar o título à esquerda ou à direita, altere o text-align */
+.foto-section h2.left {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 20px; /* Adiciona um espaço à esquerda */
+}
+
+.foto-section h2.right {
+    text-align: right; /* Alinha o texto à direita */
+    margin-right: 20px; /* Adiciona um espaço à direita */
+}
+
+/* Estilo para os projetos */
+.projeto {
+    margin-bottom: 20px; /* Espaçamento entre os projetos */
+}
+
+.projeto-img img {
+    width: 100%; /* Faz as imagens de cada projeto ocuparem toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que as imagens se alinhem corretamente */
+}
+
+/* Seção de projetos */
+.conteiner-projetos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
+    gap: 50px; /* Espaçamento entre as colunas */
+    margin: 20px 0;
+}
+
+/* Responsividade para tablets e celulares */
+
+/* Telas grandes: desktops (1024px e acima) */
+@media (min-width: 1024px) {
+    .conteiner-projetos > div {
+        flex: 1 1 calc(25% - 50px); /* 4 projetos por linha */
+    }
+}
+
+/* Telas médias: tablets (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .conteiner-projetos {
+        gap: 40px; /* Reduz o espaçamento para tablets */
+    }
+    .conteiner-projetos > div {
+        flex: 1 1 calc(33.33% - 40px); /* 3 projetos por linha */
+    }
+}
+
+/* Telas pequenas: celulares (481px - 767px) */
+@media (max-width: 767px) {
+    .conteiner-projetos {
+        gap: 30px; /* Ajusta o espaçamento */
+    }
+    .conteiner-projetos > div {
+        flex: 1 1 calc(50% - 30px); /* 2 projetos por linha */
+    }
+}
+
+/* Telas muito pequenas: celulares (até 480px) */
+@media (max-width: 480px) {
+    .conteiner-projetos > div {
+        flex: 1 1 100%; /* 1 projeto por linha */
+        margin-bottom: 20px; /* Espaçamento adicional para projetos empilhados */
+    }
+}
+
+/* Ajuste para botões clicáveis */
+button {
+    min-width: 44px; /* Largura mínima recomendada para interação */
+    padding: 10px; /* Espaçamento interno confortável */
+}

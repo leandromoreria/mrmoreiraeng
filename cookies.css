@@ -1,0 +1,95 @@
+/* Estilos para a Política de Cookies */
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte 'Poppins' como fonte padrão */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    background: #2C2C2C; /* Aplica cor ao fundo */
+}
+
+/* Cabeçalho da Política de Cookies */
+.cookies-header {
+    color: #ffffff; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Container principal */
+.cookies-container {
+    max-width: 1000px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o container */
+    padding: 50px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(197, 168, 128, 0.9); /* Sombra suave */
+    border: 1px solid #c5a880; /* Adiciona uma borda sólida de 1px */
+}
+
+/* Estilos para a seção de política de cookies */
+.politica-cookies {
+    margin-bottom: 20px; /* Espaçamento abaixo da seção */
+}
+
+/* Títulos das seções */
+.politica-cookies h2 {
+    color: #333; /* Cor do título */
+    margin-top: 20px; /* Margem acima do título */
+    margin-bottom: 10px; /* Margem abaixo do título */
+}
+
+/* Parágrafos */
+.politica-cookies p {
+    margin-bottom: 15px; /* Espaçamento abaixo dos parágrafos */
+}
+
+/* Lista não ordenada */
+.politica-cookies ul {
+    margin: 10px 0; /* Margem acima e abaixo da lista */
+    padding-left: 20px; /* Espaçamento interno à esquerda */
+}
+
+/* Rodapé */
+.cookies-footer {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    color: #ffffff; /* Cor do texto */
+    position: relative; /* Posição relativa */
+    bottom: 0; /* Alinha ao fundo */
+    width: 100%; /* Largura total */
+}
+
+/* Estilização para o botão de rolar para o topo */
+.scroll-to-top {
+    display: none; /* Inicialmente, o botão está oculto */
+    position: fixed; /* Fixa o botão na tela, mesmo ao rolar */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 50%; /* Torna o botão circular */
+    background-color: #ffffff; /* Define a cor de fundo padrão */
+    bottom: 30px;  /* Ajusta a altura do botão acima do rodapé da tela */
+    right: 50px; /* Define a posição à direita */
+    text-decoration: none; /* Remove sublinhado (para caso de links) */
+    text-align: center; /* Centraliza o ícone no botão */
+    line-height: 1.2; /* Alinha verticalmente o ícone */
+    font-size: 10px; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    border: 1px solid #C5A880; /* Adiciona uma borda sólida preta de 1px */
+    box-shadow: 0 4px 6px #C5A880; /* Sombra do botão */ 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transições suaves */
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Suave transição de 0.4 segundos */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.scroll-to-top:hover {
+    background-color: #C5A880; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 2px 4px #f0e68cbb; /* Sombra mais sutil ao passar o mouse */
+    transition: opacity 0.8s ease; /* Transição suave na opacidade */
+}
+
+/* Classe para exibir o botão com transição */
+.scroll-to-top.show {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Tornar visível */
+}
+

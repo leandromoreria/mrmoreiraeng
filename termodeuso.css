@@ -1,0 +1,112 @@
+/* Estilização geral do corpo */
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte 'Poppins' como fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background: #2C2C2C; /* Aplica cor ao fundo */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo do cabeçalho */
+header {
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo do contêiner */
+.container {
+    padding: 50px; /* Reduzindo o padding para 30px */
+    max-width: 1000px; /* Definindo uma largura máxima */
+    background-color: #ffffff; /* Cor de fundo do contêiner */
+    box-shadow: 0 2px 10px rgba(197, 168, 128, 0.9); /* Sombra suave */
+    margin: 20px auto; /* Margem externa para espaçamento em relação ao restante da página */
+    border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+    border: 1px solid #c5a880; /* Adiciona uma borda sólida de 1px */
+}
+
+/* Estilo dos títulos principais */
+h1 {
+    font-size: 2em; /* Tamanho da fonte para o título principal */
+    margin-bottom: 10px; /* Espaçamento inferior do título */
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    font-size: 1.5em; /* Tamanho da fonte para subtítulos */
+    margin-top: 20px; /* Espaçamento superior dos subtítulos */
+    margin-bottom: 10px; /* Espaçamento inferior dos subtítulos */
+}
+
+/* Estilo dos subtítulos de terceiro nível */
+h3 {
+    font-size: 1.2em; /* Tamanho da fonte para subtítulos de terceiro nível */
+    margin-top: 15px; /* Espaçamento superior dos subtítulos de terceiro nível */
+    margin-bottom: 5px; /* Espaçamento inferior dos subtítulos de terceiro nível */
+}
+
+/* Estilo dos parágrafos */
+p {
+    margin: 15px 0; /* Margem superior e inferior dos parágrafos */
+    text-align: justify; /* Justifica o texto dos parágrafos */
+}
+
+/* Estilo das listas ordenadas */
+ol {
+    margin: 10px 0 20px 20px; /* Margem para a lista ordenada (superior, inferior, esquerda) */
+}
+
+/* Estilo do rodapé */
+footer {
+    color: #FFFFFF; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 30px; /* Espaçamento interno do rodapé */
+    position: relative; /* Posicionamento relativo para o rodapé */
+    bottom: 0; /* Alinha o rodapé ao fundo da página */
+    width: 100%; /* Largura total do rodapé */
+    margin-top: 20px; /* Margem superior do rodapé */
+    margin-left: 700px; /* Posicionamento ao lado esquerdo para o rodapé */
+}
+
+/* Estilo adicional para a data de atualização */
+header p {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 1em; /* Tamanho da fonte para a data de atualização */
+    text-align: center; /* Centraliza a data de atualização */
+}
+
+/* Estilização para o botão de rolar para o topo */
+.scroll-to-top {
+    display: none; /* Inicialmente, o botão está oculto */
+    position: fixed; /* Fixa o botão na tela, mesmo ao rolar */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 50%; /* Torna o botão circular */
+    background-color: #ffffff; /* Define a cor de fundo padrão */
+    bottom: 30px;  /* Ajusta a altura do botão acima do rodapé da tela */
+    right: 50px; /* Define a posição à direita */
+    text-decoration: none; /* Remove sublinhado (para caso de links) */
+    text-align: center; /* Centraliza o ícone no botão */
+    line-height: 1.2; /* Alinha verticalmente o ícone */
+    font-size: 10px; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    border: 1px solid #C5A880; /* Adiciona uma borda sólida preta de 1px */
+    box-shadow: 0 4px 6px #C5A880; /* Sombra do botão */ 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transições suaves */
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Suave transição de 0.4 segundos */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.scroll-to-top:hover {
+    background-color: #C5A880; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 2px 4px #f0e68cbb; /* Sombra mais sutil ao passar o mouse */
+    transition: opacity 0.8s ease; /* Transição suave na opacidade */
+}
+
+/* Classe para exibir o botão com transição */
+.scroll-to-top.show {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Tornar visível */
+}
