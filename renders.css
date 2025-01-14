@@ -213,32 +213,65 @@ header {
     margin: 20px 0;
 }
 
+/* Ajuste para botões clicáveis */
+button {
+    min-width: 44px; /* Largura mínima recomendada para interação */
+    padding: 10px; /* Espaçamento interno confortável */
+}
+
 /* Responsividade para tablets e celulares */
 
 /* Telas grandes: desktops (1024px e acima) */
 @media (min-width: 1024px) {
     .conteiner-projetos > div {
         flex: 1 1 calc(25% - 50px); /* 4 projetos por linha */
+        margin-bottom: 20px; /* Espaçamento inferior para os itens */
+    }
+
+    .conteiner-projetos {
+        gap: 40px; /* Ajusta o espaçamento entre os projetos */
+    }
+
+    .conteiner-projetos img {
+        width: 100%; /* As imagens ocupam toda a largura do item */
+        height: auto; /* Mantém proporção das imagens */
+        object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
     }
 }
 
 /* Telas médias: tablets (768px - 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
     .conteiner-projetos {
-        gap: 40px; /* Reduz o espaçamento para tablets */
+        gap: 30px; /* Ajusta o espaçamento entre os projetos */
     }
+
     .conteiner-projetos > div {
-        flex: 1 1 calc(33.33% - 40px); /* 3 projetos por linha */
+        flex: 1 1 calc(33.33% - 30px); /* 3 projetos por linha */
+        margin-bottom: 20px; /* Espaçamento inferior para os itens */
+    }
+
+    .conteiner-projetos img {
+        width: 100%; /* As imagens ocupam toda a largura do item */
+        height: auto; /* Mantém proporção das imagens */
+        object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
     }
 }
 
 /* Telas pequenas: celulares (481px - 767px) */
 @media (max-width: 767px) {
     .conteiner-projetos {
-        gap: 30px; /* Ajusta o espaçamento */
+        gap: 20px; /* Ajusta o espaçamento entre os projetos */
     }
+
     .conteiner-projetos > div {
-        flex: 1 1 calc(50% - 30px); /* 2 projetos por linha */
+        flex: 1 1 calc(50% - 20px); /* 2 projetos por linha */
+        margin-bottom: 20px; /* Espaçamento inferior para os itens */
+    }
+
+    .conteiner-projetos img {
+        width: 100%; /* As imagens ocupam toda a largura do item */
+        height: auto; /* Mantém proporção das imagens */
+        object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
     }
 }
 
@@ -246,12 +279,16 @@ header {
 @media (max-width: 480px) {
     .conteiner-projetos > div {
         flex: 1 1 100%; /* 1 projeto por linha */
-        margin-bottom: 20px; /* Espaçamento adicional para projetos empilhados */
+        margin-bottom: 15px; /* Ajusta o espaçamento inferior */
     }
-}
 
-/* Ajuste para botões clicáveis */
-button {
-    min-width: 44px; /* Largura mínima recomendada para interação */
-    padding: 10px; /* Espaçamento interno confortável */
+    .conteiner-projetos {
+        gap: 15px; /* Reduz ainda mais o espaçamento */
+    }
+
+    .conteiner-projetos img {
+        width: 100%; /* As imagens ocupam toda a largura do item */
+        height: auto; /* Mantém proporção das imagens */
+        object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
+    }
 }

@@ -213,6 +213,12 @@ header {
     margin: 20px 0;
 }
 
+/* Ajuste para botões clicáveis */
+button {
+    min-width: 44px; /* Largura mínima recomendada para interação */
+    padding: 10px; /* Espaçamento interno confortável */
+}
+
 /* Responsividade para tablets e celulares */
 
 /* Telas grandes: desktops (1024px e acima) */
@@ -250,8 +256,4 @@ header {
     }
 }
 
-/* Ajuste para botões clicáveis */
-button {
-    min-width: 44px; /* Largura mínima recomendada para interação */
-    padding: 10px; /* Espaçamento interno confortável */
-}
+
