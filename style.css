@@ -410,115 +410,156 @@ h3{
     visibility: visible; /* Tornar visível */
 }
 
-/* Estilo global para responsividade */
-@media (max-width: 1200px) {
-    /* Ajustes para telas menores que 1200px */
-    .text-img1 {
-        margin-left: 250px; /* Reduz a margem lateral */
-        width: 70%; /* Aumenta a largura para ocupar mais espaço */
-        gap: 50px; /* Reduz o espaçamento entre texto e imagem */
-    }
-
-    .content-img1 img {
-        max-width: 200px; /* Ajusta o tamanho da imagem */
-    }
-
-    .navegacao {
-        gap: 50px; /* Reduz o espaçamento entre os itens de navegação */
-        padding-left: 50px; /* Ajusta o preenchimento lateral */
-    }
-}
-
-@media (max-width: 992px) {
-    /* Ajustes para telas menores que 992px */
-    body {
-        flex-direction: column; /* Muda o layout para coluna */
-    }
-
-    header {
-        text-align: left; /* Alinha o header à esquerda */
-        padding: 10px; /* Adiciona um espaçamento interno */
-    }
-
-    .slider-content {
-        height: 300px; /* Reduz a altura do slider */
-    }
-
-    .nav-social-container {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        gap: 20px; /* Espaçamento entre itens */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ajustes para tablets e dispositivos pequenos */
-    .text-img1 {
-        flex-direction: column; /* Alinha texto e imagem verticalmente */
-        margin-left: 0; /* Remove a margem lateral */
-        width: 100%; /* O container ocupa toda a largura */
-        gap: 20px; /* Reduz o espaçamento entre os elementos */
-    }
-
-    .content-img1 img {
-        max-width: 150px; /* Reduz o tamanho da imagem */
-    }
-
-    .navegacao {
-        flex-direction: column; /* Organiza os itens verticalmente */
-        gap: 20px; /* Reduz o espaçamento entre os links */
-        padding-left: 0; /* Remove o preenchimento lateral */
-    }
-
-    .nav-social-container {
-        align-items: center; /* Centraliza os itens */
-        text-align: center;
-    }
-}
-
-@media (max-width: 576px) {
-    /* Ajustes para dispositivos móveis */
-    .container {
-        gap: 20px; /* Reduz o espaçamento entre as seções */
-    }
-
-    .text-img1 {
-        text-align: center; /* Centraliza o texto */
-        gap: 10px; /* Reduz ainda mais o espaçamento */
-    }
-
-    .content-img1 img {
-        max-width: 100px; /* Tamanho menor para telas pequenas */
-    }
-
-    .slider-content {
-        height: 200px; /* Ajusta a altura do slider */
-    }
-
-    h1 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
-    }
-
-    h4 {
-        font-size: 1em; /* Reduz o tamanho dos subtítulos */
-    }
-
-    .navegacao a {
-        font-size: 1rem; /* Reduz o tamanho da fonte */
-    }
-
-    .btn-social button {
-        font-size: 20px; /* Reduz o tamanho dos ícones */
-    }
-
-    #cookies-msg {
-        width: 90%; /* Faz o contêiner de cookies ocupar mais espaço */
-        bottom: 10%; /* Ajusta a posição inferior */
-    }
-}
-
 .rodape {
     text-align: center; /* Centraliza o conteúdo do rodapé */
     padding: 10px; /* Adiciona preenchimento interno */
     margin-bottom: 20px; /* Adiciona espaço externo entre o rodapé e o fim da tela */
     font-size: 16px; /* Ajusta o tamanho do texto */ 
 }
+
+/* Estilo global para responsividade */
+@media (max-width: 1200px) {
+    /* Ajustes para telas menores que 1200px */
+    .text-img1 {
+        margin-left: 10%; /* Margem lateral proporcional */
+        width: 80%; /* Ajusta largura para maior responsividade */
+        gap: 30px; /* Espaçamento adequado entre elementos */
+    }
+
+    .content-img1 img {
+        max-width: 300px; /* Ajusta tamanho máximo da imagem */
+        height: auto; /* Mantém proporção da imagem */
+    }
+
+    .navegacao {
+        gap: 30px; /* Reduz espaçamento entre itens de navegação */
+        padding-left: 30px; /* Ajuste proporcional no preenchimento */
+    }
+
+    .slider-content {
+        height: 400px; /* Ajusta altura do slider */
+        object-fit: cover; /* Garante que as imagens preencham sem cortar */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Ajustes para telas menores que 992px */
+    body {
+        flex-direction: column; /* Transforma o layout em coluna */
+    }
+
+    header {
+        text-align: center; /* Centraliza o header */
+        padding: 15px; /* Ajusta espaçamento interno */
+    }
+
+    .slider-content {
+        height: 350px; /* Ajusta altura do slider */
+        object-fit: cover; /* Preenche sem distorcer */
+    }
+
+    .nav-social-container {
+        flex-direction: column; /* Alinha itens verticalmente */
+        gap: 15px; /* Espaçamento entre itens */
+        text-align: center; /* Centraliza conteúdo */
+    }
+
+    .content-img1 img {
+        max-width: 250px; /* Ajusta tamanho da imagem */
+        height: auto; /* Mantém a proporção */
+    }
+
+    h1, h4 {
+        text-align: center; /* Centraliza os textos */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para tablets e dispositivos pequenos */
+    .text-img1 {
+        flex-direction: column; /* Alinha elementos verticalmente */
+        margin-left: 0; /* Remove margem lateral */
+        width: 100%; /* Ocupa toda a largura */
+        gap: 20px; /* Ajusta espaçamento entre elementos */
+    }
+
+    .content-img1 img {
+        max-width: 200px; /* Reduz tamanho máximo da imagem */
+        height: auto; /* Mantém proporção */
+    }
+
+    .navegacao {
+        flex-direction: column; /* Organiza itens verticalmente */
+        gap: 20px; /* Espaçamento entre links */
+        padding-left: 0; /* Remove preenchimento lateral */
+    }
+
+    .nav-social-container {
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza texto */
+    }
+
+    .slider-content {
+        height: 300px; /* Ajusta altura do slider */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ajusta tamanho do título */
+    }
+
+    h4 {
+        font-size: 1.2em; /* Ajusta tamanho do subtítulo */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes para dispositivos móveis */
+    .container {
+        gap: 15px; /* Reduz espaçamento entre seções */
+        padding: 10px; /* Adiciona espaçamento interno */
+    }
+
+    .text-img1 {
+        text-align: center; /* Centraliza texto */
+        gap: 10px; /* Reduz espaçamento entre elementos */
+    }
+
+    .content-img1 img {
+        max-width: 150px; /* Reduz tamanho para telas menores */
+        height: auto; /* Mantém proporção */
+    }
+
+    .slider-content {
+        height: 250px; /* Ajusta altura do slider */
+        object-fit: cover; /* Evita distorção da imagem */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduz tamanho do título */
+        text-align: center; /* Centraliza título */
+    }
+
+    h4 {
+        font-size: 1em; /* Ajusta tamanho dos subtítulos */
+        text-align: center; /* Centraliza subtítulos */
+    }
+
+    .navegacao a {
+        font-size: 1rem; /* Reduz tamanho da fonte */
+    }
+
+    .btn-social button {
+        background-color: #000; /* Garante cor preta */
+        color: #fff; /* Cor do texto branca */
+        font-size: 16px; /* Ajusta tamanho da fonte */
+        padding: 8px 12px; /* Ajusta espaçamento interno */
+    }
+
+    #cookies-msg {
+        width: 90%; /* Faz contêiner de cookies ocupar mais espaço */
+        bottom: 5%; /* Ajusta posição inferior */
+    }
+}
+
+
+
